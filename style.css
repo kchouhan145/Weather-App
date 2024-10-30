@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FAFFFD;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Make the weather app visible on a single screen with shadow */
+.weather-app{
+    background-color: #A2D729;
+    border: 2px solid white;
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px; /* Added shadow */
+    overflow: hidden;
+}
+
+/* Increase spacing between elements */
+.search-form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px; /* Added margin between form and next section */
+}
+
+input[type="text"]{
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem; /* Changed font size for better fit */
+    color: #342E37;
+    border: 2px solid #FAFFFD;
+    box-shadow: inset rgba(0, 0, 0, 0.15) 0px 2px 4px;
+}
+
+.search-btn{
+    background-color: #3C91E6;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #FAFFFD;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px;
+}
+
+.city-date-section{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.city-date-section .city{
+    font-size: 2rem;
+    opacity: 0.9;
+    font-weight: bold;
+}
+
+.city-date-section .date{
+    background-color: #3C91E6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #FAFFFD;
+}
+
+.temperature-info{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px; /* Added gap */
+}
+
+.temperature-info .temp{
+    font-size: 8rem; /* Reduced size for smaller screens */
+    font-weight: bold;
+}
+
+.temperature-info .description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.temperature-info .description i{
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.temperature-info .description span{
+    font-size: 1.5rem;
+}
+
+.additional-info{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Added space between */
+    gap: 20px; /* Added gap between each box */
+}
+
+.wind-info, .humidity-info, .visibility-info{
+    background-color: #3C91E6;
+    flex: 1; /* Make the boxes flexible to fit within the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.additional-info .material-icons{
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+.wind-info div, .humidity-info div, .visibility-info div{
+    text-align: center;
+    color: #FAFFFD;
+}
+@media (max-width: 600px) {
+    .temperature-info .temp {
+        font-size: 5rem;
+    }
+}
